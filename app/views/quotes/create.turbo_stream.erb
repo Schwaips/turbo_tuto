@@ -1,0 +1,19 @@
+<%# app/views/quotes/create.turbo_stream.erb %>
+
+<%= turbo_stream.prepend "quotes", @quote %>
+<%= turbo_stream.update Quote.new, "" %>
+
+<%# Other syntax below : %>
+<%#= turbo_stream.prepend "quotes", partial: "quotes/quote", locals: { quote: @quote } %>
+<%#= turbo_stream.update Quote.new, "" %>
+
+
+<%# Another Syntax : %>
+<%#= turbo_stream.prepend "quotes" do %>
+  <%#= render @quote %>
+<%# end %>
+<%#= turbo_stream.update Quote.new, "" %>
+
+<%# In ruby, bith syntax are the same : %>
+<%# render partial: "quotes/quote", locals: { quote: @quote } %>
+<%# render @quote %>
