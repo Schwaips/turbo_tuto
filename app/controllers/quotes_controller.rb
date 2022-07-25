@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# app/controllers/quotes_controller.rb
-
 class QuotesController < ApplicationController
   before_action :set_quote, only: %i[show edit update destroy]
 
