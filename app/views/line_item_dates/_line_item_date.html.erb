@@ -1,0 +1,23 @@
+<div class="line-item-date">
+  <div class="line-item-date__header">
+    <h2 class="line-item-date__title">
+      <%= l(line_item_date.date, format: :long) %>
+    </h2>
+
+    <div class="line-item-date__actions">
+      <%= button_to "Delete",
+                    [quote, line_item_date],
+                    method: :delete,
+                    class: "btn btn--light" %>
+      <%= link_to "Edit",
+                  [:edit, quote, line_item_date],
+                  class: "btn btn--light" %>
+    </div>
+  </div>
+</div>
+
+
+<!-- Comment :  these 2 lines are the same, first one is polymorphic routes -->
+<%#= button_to "Delete", [quote, line_item_date] %>
+<%#= button_to "Delete", quote_line_item_date_path(quote, line_item_date) %>
+
