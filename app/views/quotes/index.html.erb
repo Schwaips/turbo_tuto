@@ -3,12 +3,15 @@
 <div class="container">
   <div class="header">
     <h1>Quotes</h1>
+
     <%= link_to "New quote",
                 new_quote_path,
                 class: "btn btn--primary",
                 data: { turbo_frame: dom_id(Quote.new) } %>
   </div>
-
+  <p>This page is broadcasted thanks to turbo_stream - What does it mean ?</p>
+  <p class="mb-s">Whenever a user that belongs to the same company creates a quote, the page will be updated accordingly without refreshing the page.</p>
+  <p class="mb-s">Click on quote's title to go to Quote#Show</p>
   <%= turbo_frame_tag Quote.new %>
 
   <%= turbo_frame_tag "quotes" do %>
